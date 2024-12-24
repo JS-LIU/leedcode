@@ -17,8 +17,26 @@
  * @param {TreeNode} root
  * @return {number}
  */
-var sumNumbers = function(root) {
-    
+var sumNumbers = function (root) {
+    let res = 0;
+    function tranverse(root, path) {
+        if (!root) {
+            return ;
+        }
+        let nowVal = root.val + '';
+        path += nowVal;
+        if (!root.left && !root.right) {
+            res += parseInt(path);
+            path = path.slice(0, -1);
+            return ;
+        }
+        tranverse(root.left, path);
+        tranverse(root.right, path);
+        //  将path最后一个删掉
+        path = path.slice(0, -1);
+    }
+    tranverse(root,"");
+    return res;
 };
 // @lc code=end
 

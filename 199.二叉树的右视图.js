@@ -1,7 +1,7 @@
 /*
- * @lc app=leetcode.cn id=257 lang=javascript
+ * @lc app=leetcode.cn id=199 lang=javascript
  *
- * [257] 二叉树的所有路径
+ * [199] 二叉树的右视图
  */
 
 // @lc code=start
@@ -15,11 +15,10 @@
  */
 /**
  * @param {TreeNode} root
- * @return {string[]}
+ * @return {number[]}
  */
-var binaryTreePaths = function(root) {
-
-
+var rightSideView = function(root) {
+    
 };
 // @lc code=end
 
