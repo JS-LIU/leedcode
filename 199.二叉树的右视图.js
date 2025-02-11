@@ -17,22 +17,21 @@
  * @param {TreeNode} root
  * @return {number[]}
  */
-var rightSideView = function(root) {
-    let deepth = 0;
+var rightSideView = function (root) {
     let res = [];
-    function tranverse(root,deepth){
-        if(!root){
+    function traverse(root, deepth) {
+        if (!root) {
             return;
         }
         deepth++;
-        if(res.length < deepth ){
+        if (res.length < deepth) {
             res.push(root.val);
         }
-        tranverse(root.right,deepth);
-        tranverse(root.left,deepth);
+        traverse(root.right, deepth);
+        traverse(root.left, deepth);
         deepth--;
     }
-    tranverse(root,deepth);
+    traverse(root, 0);
     return res;
 };
 // @lc code=end

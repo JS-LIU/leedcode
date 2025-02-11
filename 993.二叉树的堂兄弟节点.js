@@ -1,7 +1,7 @@
 /*
- * @lc app=leetcode.cn id=257 lang=javascript
+ * @lc app=leetcode.cn id=993 lang=javascript
  *
- * [257] 二叉树的所有路径
+ * [993] 二叉树的堂兄弟节点
  */
 
 // @lc code=start
@@ -15,11 +15,12 @@
  */
 /**
  * @param {TreeNode} root
- * @return {string[]}
+ * @param {number} x
+ * @param {number} y
+ * @return {boolean}
  */
-var binaryTreePaths = function(root) {
-
-
+var isCousins = function(root, x, y) {
+    
 };
 // @lc code=end
 
